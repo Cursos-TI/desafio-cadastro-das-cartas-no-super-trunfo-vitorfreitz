@@ -82,7 +82,7 @@ printf("\n");
 printf("Carta 2:\n"); //CARTA 02
 printf("Estado: %c\n", estado2);
 printf("Codigo: %s\n", codigocarta2);
-printf("Nome da Cidade: %s\n", nomecidade2);w
+printf("Nome da Cidade: %s\n", nomecidade2);
 printf("Populacao: %d\n", populacao2);
 printf("Area: %f km2\n", area2);
 printf("PIB: %f bilhoes de reais\n", pib2);
