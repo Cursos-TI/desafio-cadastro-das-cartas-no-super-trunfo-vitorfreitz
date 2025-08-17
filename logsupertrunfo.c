@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> // Necessário para a função system("cls") ou system("clear")
+#include <stdlib.h>
 
 int main() {
 
@@ -35,7 +35,6 @@ int main() {
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosturisticos1);
 
-    // Calcula a densidade demografica da Carta 1
     densidadeDemografica1 = populacao1 / area1;
 
     printf("\n");
@@ -72,13 +71,10 @@ int main() {
     printf("Digite o Numero de Pontos Turisticos: ");
     scanf("%d", &pontosturisticos2);
 
-    // Calcula a densidade demografica da Carta 2
     densidadeDemografica2 = populacao2 / area2;
 
-    // Limpa a tela para a exibicao
-    system("cls"); // Para Windows
-    // system("clear"); // Para Linux/macOS
-
+    system("cls");
+    
     // Exibicao das cartas cadastradas
     printf("--- Cartas Cadastradas ---\n");
 
@@ -98,7 +94,6 @@ int main() {
     printf("Densidade Demografica: %.2f hab/km2\n", densidadeDemografica2);
     printf("\n");
     
-    // --- Inicio do Menu e Logica de Comparacao ---
     int opcao;
     
     printf("--- ESCOLHA O ATRIBUTO PARA COMPARAR ---\n");
@@ -114,7 +109,7 @@ int main() {
     printf("\n--- RESULTADO DA COMPARACAO ---\n");
     
     switch (opcao) {
-        case 1: // Comparacao por Populacao
+        case 1: // Comparação por População
             printf("Atributo escolhido: Populacao\n");
             printf("%s (Populacao: %d) vs %s (Populacao: %d)\n", nomecidade1, populacao1, nomecidade2, populacao2);
             if (populacao1 > populacao2) {
@@ -126,7 +121,7 @@ int main() {
             }
             break;
             
-        case 2: // Comparacao por Area
+        case 2: // Comparação por Area
             printf("Atributo escolhido: Area\n");
             printf("%s (Area: %.2f) vs %s (Area: %.2f)\n", nomecidade1, area1, nomecidade2, area2);
             if (area1 > area2) {
@@ -138,7 +133,7 @@ int main() {
             }
             break;
             
-        case 3: // Comparacao por PIB
+        case 3: // Comparação por PIB
             printf("Atributo escolhido: PIB\n");
             printf("%s (PIB: %.2f) vs %s (PIB: %.2f)\n", nomecidade1, pib1, nomecidade2, pib2);
             if (pib1 > pib2) {
@@ -150,7 +145,7 @@ int main() {
             }
             break;
 
-        case 4: // Comparacao por Pontos Turisticos
+        case 4: // Comparação por Pontos Turisticos
             printf("Atributo escolhido: Pontos Turisticos\n");
             printf("%s (Pontos Turisticos: %d) vs %s (Pontos Turisticos: %d)\n", nomecidade1, pontosturisticos1, nomecidade2, pontosturisticos2);
             if (pontosturisticos1 > pontosturisticos2) {
@@ -162,7 +157,7 @@ int main() {
             }
             break;
 
-        case 5: // Comparacao por Densidade Demografica (Regra Invertida)
+        case 5: // Comparação por Densidade Demografica (Regra Invertida)
             printf("Atributo escolhido: Densidade Demografica\n");
             printf("%s (Densidade: %.2f) vs %s (Densidade: %.2f)\n", nomecidade1, densidadeDemografica1, nomecidade2, densidadeDemografica2);
             if (densidadeDemografica1 < densidadeDemografica2) { // Menor valor vence
